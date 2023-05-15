@@ -14,24 +14,28 @@ Blade Documentation: [https://laravel.com/docs/10.x/blade](https://laravel.com/d
 
 ## Blade
 
-- Print: `{{ }}`
-- Print a variable: `{{ $some_variable }}`
+- Echo: `{{ }}` `{{ $some_variable }}`
 - Directives (Conditional Logic):  `@if()`, `@endif`, `@for()`, `@endfor`, `@php`, `@endphp`, etc.
 - All Directives: [https://laravel.com/docs/10.x/blade#blade-directives](https://laravel.com/docs/10.x/blade#blade-directives)
 
-## Example
-
-File: `/resources/views/listings.blade.php`
-
+## Blade Cook Book
+Echo
 ```blade
-<h1>{{ $heading }}</h1>
+{{ $name }}
+```
 
-@if(count($listings) == 0)
-<p>No listings found.</p>
+Echo w/out escaping
+```blade
+{!! $name !!}
+```
+
+If Statement
+```blade
+@if ($some_validation)
+    // Some code....
+@elseif ($some_other_validation)
+    // Some other code....
+@else
+    // Default code...
 @endif
-
-@foreach ($listings as $listing)
-<h2><a href="/listings/{{ $listing['id'] }}">{{ $listing['title'] }}</a></h2>
-<p>{{ $listing['description'] }}</p>
-@endforeach
 ```
