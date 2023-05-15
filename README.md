@@ -7,12 +7,8 @@
 
 ## Glossary
 
-[Blade](blade) 
-
-[Database](database)  
-
-[Models](models.md) 
-
-[Setup/Tools](setup-tools)
-
-[Routing](routing.md)
+- [Blade](blade) 
+- [Database](database)  
+- [Models](models.md) 
+- [Setup/Tools](setup-tools)
+- [Routing](routing.md)
