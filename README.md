@@ -9,6 +9,6 @@
 
 - [Blade](blade) 
 - [Database](database)  
-- [Models](models.md) 
-- [Routing](routing.md)
+- [Models](models) 
+- [Routing](routing)
 - [Setup/Tools](setup-tools)
