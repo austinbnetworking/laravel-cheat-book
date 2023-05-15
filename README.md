@@ -8,12 +8,12 @@
 
 ## Glossary
 
-[Resources](laravel/resources.md)
+[Resources](resources)
 
-[Database](laravel/database.md)
+[Database](database)
 
-[Blade](laravel/blade.md)
+[Blade](blade)
 
-[Models](laravel/models.md)
+[Models](models.md)
 
-[Routing](laravel/routing.md)
+[Routing](routing.md)

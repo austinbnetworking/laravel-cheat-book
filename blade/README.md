@@ -6,7 +6,7 @@ Blade Documentation: [https://laravel.com/docs/10.x/blade](https://laravel.com/d
 
 ## Glossary
 
-[Extending Templates](blade/extending-templates.md)
+[Extending Templates](extending-templates.md)
 
 ## File Locations
 
