@@ -1,5 +1,5 @@
 # Resources
 
-[Setup with DDEV](resources/setup.md)
+[Setup with DDEV](resources/setup-with-ddev.md)
 
-[PHP Artisan](resources/phpartisan.md)
+[PHP Artisan](resources/php-artisan.md)
