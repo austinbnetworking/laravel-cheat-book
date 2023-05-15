@@ -1,8 +1,6 @@
 # Laravel
 
-## Current Training
-
-My code repository for examples: https://github.com/austinbnetworking/laragigs
+## Resources:
 
 [Laravel From Scratch 2022 | 4+ Hour Course](https://youtu.be/MYyJ4PuL4pY?t=4742)
 
