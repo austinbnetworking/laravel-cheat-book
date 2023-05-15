@@ -2,50 +2,70 @@
 
 PHP Artisan is a command line interface included with Laravel. Artisan exists at the root of your application as the artisan script and provides a number of helpful commands that can assist you while you build your application. 
 
-Documentation: [https://laravel.com/docs/10.x/artisan](https://laravel.com/docs/10.x/artisan)
+- [Laravel PHP Artisan Documentation](https://laravel.com/docs/10.x/artisan)
 
 **Note with Docker:** You must ssh into the container before you can run `php artisan`.
 
-## Commands
+## PHP Artisan Cook Book
 
-### Gather all available commands:
+Gather all available commands:
 
-`php artisan list`
+```
+php artisan list
+```
 
-### View help screen for a command:
+View help screen for a command:
 
 *All commands have a help screen.*
 
-`php artisan help migrate`
+```
+php artisan help migrate
+```
 
-### Make a model:
+Make a model:
 
-`php artisan make:model Listing`
+```
+php artisan make:model Listing
+```
 
-### Make a seeder:
+Make a seeder:
 
-`php artisan make:seeder SomeSeeder`
+```
+php artisan make:seeder SomeSeeder
+```
 
-### Make a migration:
+Make a migration:
 
-`php artisan make:migration create_listings_table`
+```
+php artisan make:migration create_listings_table
+```
 
-### Make a factory:
+Make a factory:
 
-`php artisan make:factory PostFactory`
+```
+php artisan make:factory PostFactory
+```
 
-### Run migrations:
+Run migrations:
 
-`php artisan migrate:refresh`
+```
+php artisan migrate:refresh
+```
 
-### Run migrations and seed data:
+Run migrations and seed data:
 
-`php artisan migrate:refresh —seed`
+```
+php artisan migrate:refresh —seed
+```
 
-### Run data seeding:
+Run data seeding:
 
-`php artisan db:seed`
+```
+php artisan db:seed
+```
 
-### Run data seeding for a specific class:
+Run data seeding for a specific class:
 
-`php artisan db:seed --class=UserSeeder`
+```
+php artisan db:seed --class=UserSeeder
+```

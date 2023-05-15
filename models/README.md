@@ -2,7 +2,7 @@
 
 Laravel uses Eloquent, an object-relational mapper (ORM) that assists in interactions with the database. In Eloquent, each database table has a corresponding Model. The Model object is used to retrieve records, insert records, update records, delete records, etc.
 
-Documentation: [https://laravel.com/docs/10.x/eloquent](https://laravel.com/docs/10.x/eloquent)
+- [Laravel Models Documentation](https://laravel.com/docs/10.x/eloquent)
 
 ## File Location
 
@@ -40,4 +40,6 @@ class Listing extends Model
 
 ### Create a Model:
 
-`php artisan make:model SomeModel`
+```
+php artisan make:model SomeModel
+```

@@ -2,11 +2,11 @@
 
 Laravel uses a PHP templating engine called blade.
 
-Blade Documentation: [https://laravel.com/docs/10.x/blade](https://laravel.com/docs/10.x/blade)
+- [Laravel Blade Documentation](https://laravel.com/docs/10.x/blade)
 
 ## Glossary
 
-[Extending Templates](extending-templates.md)
+- [Extending Templates W/ Yield](extending-templates-w-yield.md)
 
 ## File Locations
 

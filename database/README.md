@@ -1,5 +1,4 @@
 # Database
 
-[Migrations](migrations.md)
-
-[Factories/Seeding](factories-seeding.md)
+- [Migrations](migrations.md)
+- [Factories/Seeding](factories-seeding.md)

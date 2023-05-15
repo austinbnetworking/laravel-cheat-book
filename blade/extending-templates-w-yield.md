@@ -25,8 +25,8 @@ The `@yield` directive takes a custom name parameter.
 
 To extend that code in another template, use the `@extends` & `@section` directives.
 
-- The `@extends` directive takes a name parameter that should match the file name of the base template. (`layout.blade.php` is `layout`)
-- The `@section` is a wrapper and takes a name parameter that should match the section made with our `@yield` directive.
+- The `@extends` directive accepts a name parameter matching the file name of the base template. (`layout.blade.php` is `layout`)
+- The `@section` directive accepts a name parameter matching the section made with the `@yield` directive.
 
 ```blade
 @extends('layout')
