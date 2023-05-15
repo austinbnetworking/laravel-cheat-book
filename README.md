@@ -13,6 +13,6 @@
 
 [Models](models.md) 
 
-[Resources](resources)
+[Setup/Tools](setup-tools)
 
 [Routing](routing.md)
