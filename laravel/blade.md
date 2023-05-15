@@ -23,7 +23,7 @@ Blade Documentation: [https://laravel.com/docs/10.x/blade](https://laravel.com/d
 
 File: `/resources/views/listings.blade.php`
 
-```php
+```blade
 <h1>{{ $heading }}</h1>
 
 @if(count($listings) == 0)
