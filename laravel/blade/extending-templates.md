@@ -10,7 +10,7 @@ The `@yield` directive takes a custom name parameter.
 
 File: `/resources/views/layout.blade.php`
 
-```php
+```blade
 <!DOCTYPE html>
 <html lang="en">
 <head>
