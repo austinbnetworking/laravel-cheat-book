@@ -32,10 +32,38 @@ Echo w/out escaping
 If Statement
 ```blade
 @if ($some_validation)
-    <!-- Some code.... -->
-@elseif ($some_other_validation)
-    <!-- Some other code.... -->
+    <!-- Some code... -->
 @else
-    <!-- Default code.... -->
+    <!-- Default code... -->
 @endif
+```
+
+For Loop
+```blade
+@for ($i = 0; $i < 10; $i++)
+    <!-- Some code... -->
+@endfor
+ ```
+ 
+For Each Loop
+ ```blade
+@foreach ($users as $user)
+    <!-- Some code... -->
+@endforeach
+ ```
+ 
+For Else Loop
+ ```blade
+@forelse ($users as $user)
+    <!-- Some code... -->
+@empty
+    <!-- Some other code... -->
+@endforelse
+ ```
+ 
+While Loop
+ ```blade
+@while (true)
+    <p>I'm looping forever.</p>
+@endwhile
 ```
