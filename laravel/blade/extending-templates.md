@@ -33,7 +33,7 @@ To extend that code in another template, use the `@extends` & `@section` directi
 
 File: `/resources/views/listings.blade.php`
 
-```php
+```blade
 @extends('layout')
 
 @section('content')
