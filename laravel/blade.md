@@ -32,10 +32,10 @@ Echo w/out escaping
 If Statement
 ```blade
 @if ($some_validation)
-    // Some code....
+    <!-- Some code.... -->
 @elseif ($some_other_validation)
-    // Some other code....
+    <!-- Some other code.... -->
 @else
-    // Default code...
+    <!-- Default code.... -->
 @endif
 ```
