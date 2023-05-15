@@ -64,6 +64,6 @@ For Else Loop
 While Loop
  ```blade
 @while (true)
-    <p>I'm looping forever.</p>
+    <!-- Some code... -->
 @endwhile
 ```
