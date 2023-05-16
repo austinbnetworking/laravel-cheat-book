@@ -1,10 +1,10 @@
-# Extending Templates using Yield
+# Extending Templates W/ Yield
 
 ## Usage
 
-Create a base template, and use the `@yield` directive to designate a place for dynamic code.
+In a base template, we can yield a location to be used when extending the template.
 
-The `@yield` directive takes a custom name parameter. 
+- The `@yield` directive takes a custom name parameter. This can be anything, often is a description of what the section is. 
 
 ```blade
 <!DOCTYPE html>
@@ -23,10 +23,10 @@ The `@yield` directive takes a custom name parameter.
 </html>
 ```
 
-To extend that code in another template, use the `@extends` & `@section` directives.
+In another file, we can extend the base template.
 
-- The `@extends` directive accepts a name parameter matching the file name of the base template. (`layout.blade.php` is `layout`)
-- The `@section` directive accepts a name parameter matching the section made with the `@yield` directive.
+- The `@extends` directive takes a name parameter matching the file name of the base template. (`layout.blade.php` is `layout`)
+- The `@section` directive takes a name parameter matching the section made with the `@yield` directive.
 
 ```blade
 @extends('layout')
