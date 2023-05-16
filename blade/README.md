@@ -18,7 +18,7 @@ Laravel uses a PHP templating engine called blade.
 - Directives (Conditional Logic):  `@if()`, `@endif`, `@for()`, `@endfor`, `@php`, `@endphp`, etc.
 - All Directives: [https://laravel.com/docs/10.x/blade#blade-directives](https://laravel.com/docs/10.x/blade#blade-directives)
 
-## Blade Cook Book
+## Blade Cheat Sheet
 Echo
 ```blade
 {{ $name }}
