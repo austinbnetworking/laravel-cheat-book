@@ -1,8 +1,12 @@
 # Routing
 
+[&larr; Main glossary](README.md)
+
+***
+
 A route is a PHP class that provides all the functionality we need to map views and controllers to destinations. 
 
-- [Laravel Routing Documentation](https://laravel.com/docs/10.x/routing)
+Documentation: [https://laravel.com/docs/10.x/routing](https://laravel.com/docs/10.x/routing)
 
 ## File Locations
 
@@ -38,6 +42,8 @@ A route is a PHP class that provides all the functionality we need to map views 
         2. Use: `$request->name` and `$request->city` to access the parameters.
 
 ## Example
+
+File: `/routes/web.php`
 
 ```php
 <?php

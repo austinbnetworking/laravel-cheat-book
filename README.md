@@ -1,14 +1,13 @@
 # Laravel
 
-## Resources:
+## Main Documentation:
 
-- [Traversy Crash Course](https://youtu.be/MYyJ4PuL4pY?t=4742)
-- [Laravel Documentation](https://laravel.com/docs/10.x)
+- Laravel Documentation: [https://laravel.com/docs/10.x](https://laravel.com/docs/10.x)
 
 ## Glossary
 
-- [Blade](blade) 
-- [Database](database)  
-- [Models](models) 
-- [Routing](routing)
-- [Setup/Tools](setup-tools)
+- [Resources](resources.md) 
+- [Database](database.md)  
+- [Blade](blade.md) 
+- [Models](models.md)
+- [Routing](routing.md)
