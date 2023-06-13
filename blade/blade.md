@@ -1,18 +1,12 @@
 # Blade
 
-[&larr; Main glossary](README.md)
+[&larr; Home](../README.md)
 
 ***
 
 Laravel uses a PHP templating engine called blade.
 
 Blade Documentation: [https://laravel.com/docs/10.x/blade](https://laravel.com/docs/10.x/blade)
-
-## Glossary
-
-[Components](blade/components.md)
-
-[Yield & Sections](blade/yield-sections.md)
 
 ## File Locations
 
@@ -33,11 +27,11 @@ File: `/resources/views/listings.blade.php`
 <h1>{{ $heading }}</h1>
 
 @if(count($listings) == 0)
-<p>No listings found.</p>
+    <p>No listings found.</p>
 @endif
 
 @foreach ($listings as $listing)
-<h2><a href="/listings/{{ $listing['id'] }}">{{ $listing['title'] }}</a></h2>
-<p>{{ $listing['description'] }}</p>
+    <h2><a href="/listings/{{ $listing['id'] }}">{{ $listing['title'] }}</a></h2>
+    <p>{{ $listing['description'] }}</p>
 @endforeach
 ```

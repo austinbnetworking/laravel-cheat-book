@@ -1,5 +1,9 @@
 # Factories/Seeding
 
+[&larr; Home](../README.md)
+
+***
+
 Seeding a database is a way of creating dummy records in a table for testing purposes. You can seed data directly by manually entering it, or you can build a factory that can handle dummy data generation using the PHPFaker library. 
 
 Factories Documentation: [https://laravel.com/docs/10.x/eloquent-factories](https://laravel.com/docs/10.x/eloquent-factories)
@@ -17,7 +21,7 @@ We can use factories to seed data, allowing us to create large amounts of test d
 
 Factories must have a `definition()` method defined that returns values for how a field’s data should be generated. The available faker methods for generating data can be found at the faker libraries documentation page: [https://fakerphp.github.io/formatters/](https://fakerphp.github.io/formatters/)
 
-Once a factory is defined, we can it in our seeder file. 
+Once a factory is defined, we can use it in our seeder file. 
 
 File: `/database/factories/ListingFactory.php`
 

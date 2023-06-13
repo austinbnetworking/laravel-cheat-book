@@ -1,5 +1,9 @@
 # Migrations
 
+[&larr; Home](../README.md)
+
+***
+
 Laravel allows us to define and share an application's database schema definition. Each migration contains a timestamp to determine the order.
 
 Documentation: [https://laravel.com/docs/10.x/migrations](https://laravel.com/docs/10.x/migrations)

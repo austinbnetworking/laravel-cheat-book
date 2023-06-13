@@ -1,5 +1,9 @@
 # Components
 
+[&larr; Home](../README.md)
+
+***
+
 Components and slots provide similar benefits to sections, layouts, and includes; however, some may find the mental model of components and slots easier to understand.
 
 Documentation: [https://laravel.com/docs/10.x/blade#components](https://laravel.com/docs/10.x/blade#components)
@@ -56,13 +60,12 @@ To achieve this, we must echo a variable named `$slot` which can be used to rend
 In another file, we can inject content into that component.
 
 ```php
-
 ## /resources/views/components/nav-links.blade.php
 
 <x-nav>
-    <a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
+	<a href="#">Link 1</a>
+	<a href="#">Link 2</a>
+	<a href="#">Link 3</a>
 </x-nav>
 ```
 
@@ -71,7 +74,7 @@ Those two files would render as:
 ```php
 <nav>
 	<div>Title</div>
-  <a href="#">Link 1</a>
+	<a href="#">Link 1</a>
 	<a href="#">Link 2</a>
 	<a href="#">Link 3</a>
 </nav>
