@@ -19,9 +19,9 @@
   - [Components](blade/components.md)
   - [Yield & Sections](blade/yield-sections.md)
 - Routing
+  - [Pagination](routing/pagination.md)
   - [Routing Basics](routing/routing.md)
 
 ## Todo
 
-- Make a page on Pagination
 - Make a page on Forms & Authentication
