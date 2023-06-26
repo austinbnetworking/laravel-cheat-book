@@ -19,9 +19,15 @@
   - [Components](blade/components.md)
   - [Yield & Sections](blade/yield-sections.md)
 - Routing
+  - [Forms & Authentication](database/forms-authentication.md)
   - [Pagination](routing/pagination.md)
   - [Routing Basics](routing/routing.md)
 
 ## Todo
 
-- Make a page on Forms & Authentication
+- Update [database/forms-authentication.md](database/forms-authentication.md)
+- Update [blade/yield-sections.md](blade/yield-sections.md)
+- Update [blade/blade.md](blade/blade.md)
+- Update [routing/routing.md](routing/routing.md)
+- Watch [What's new in Laravel 9](https://laracasts.com/series/whats-new-in-laravel-9)
+- Watch [What's new in Laravel 10](https://laracasts.com/series/whats-new-in-laravel-10)

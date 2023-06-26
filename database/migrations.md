@@ -4,7 +4,7 @@
 
 ***
 
-Laravel allows us to define and share an application's database schema definition. Each migration contains a timestamp to determine the order.
+Laravel allows us to define and share an application's database schema definition. Each migration contains a timestamp, which is used when determining the order of operations.
 
 Documentation: [https://laravel.com/docs/10.x/migrations](https://laravel.com/docs/10.x/migrations)
 
@@ -12,11 +12,28 @@ Documentation: [https://laravel.com/docs/10.x/migrations](https://laravel.com/do
 
 - `/database/migrations`
 
-## Migrations
+## Define a Migration
 
-Each migration must contain `up()` and `down()` methods. This is how the tables are created when running migrations, and how they are deleted when rolled back.
+Each migration must contain `up()` and `down()` methods. The up method is how we instantiate columns/data/indexes and the down method is how we delete them. 
 
-File: `2023_04_20_041133_create_listings_table.php`
+After generating a migration, we define it's structure using Laravel's schema facade. 
+
+A list of available column types & column modifiers can be found here:
+
+[https://laravel.com/docs/10.x/migrations#available-column-types](https://laravel.com/docs/10.x/migrations#available-column-types)
+
+[https://laravel.com/docs/10.x/migrations#column-modifiers](https://laravel.com/docs/10.x/migrations#column-modifiers)
+
+To generate a migration:
+
+```php
+php artisan make:migration create_listings_table
+```
+
+- By default, the class will map to the database table based on this naming convention:
+    - For `create_listings_table`, the default table is `listings`.
+
+Example File: `2023_07_20_120000_create_listings_table.php`
 
 ```php
 return new class extends Migration
@@ -53,26 +70,34 @@ return new class extends Migration
 };
 ```
 
-## Usage
+## Running Migrations
 
-### Create migration:
-
-```php
-php artisan make:migration create_listings_table
-```
-
-- File made: `2023_04_20_041133_create_listings_table.php` - Date is appended.
-- By default, the class will map to the database table based on file naming:
-    - For `create_listings_table`, the default table is `listings`.
-
-### Run migrations:
-
+Run all outstanding migrations
 ```php
 php artisan migrate
 ```
 
-### Refresh migrations and seeding:
+Get a migration status
+```php
+php artisan migrate:status
+```
 
+Rollback the last migration
+```php
+php artisan migrate:rollback
+```
+
+Rollback all migrations
+```php
+php artisan migrate:reset
+```
+
+Rollback & migrate
+```php
+php artisan migrate:refresh
+```
+
+Rollback & migrate & seed
 ```php
 php artisan migrate:refresh —seed
 ```

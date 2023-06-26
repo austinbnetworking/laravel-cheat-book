@@ -17,13 +17,15 @@
 
 You can require Laravel on a per-project basis, or use a global installer.
 
-### Per-project:
+### 1. Install Laravel:
+
+Using the per-project composer package:
 
 ```php
 composer create-project laravel/laravel example-app
 ```
 
-### Global:
+Using the global installer:
 
 ```php
 composer global require laravel/installer
@@ -33,11 +35,13 @@ composer global require laravel/installer
 laravel new example-app
 ```
 
-### Use DDEV to get the application running:
+### 2. Initialize DDEV Project:
 
 ```php
 ddev config
 ```
+
+### 3. Start Project:
 
 ```php
 ddev start

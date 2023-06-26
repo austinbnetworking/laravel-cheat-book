@@ -4,9 +4,11 @@
 
 ***
 
-Seeding a database is a way of creating dummy records in a table for testing purposes. You can seed data directly by manually entering it, or you can build a factory that can handle dummy data generation using the PHPFaker library. 
+Use Factories & Seeding to create large amounts of test data automatically. Factories make use of the PHPFaker library.
 
 Factories Documentation: [https://laravel.com/docs/10.x/eloquent-factories](https://laravel.com/docs/10.x/eloquent-factories)
+
+Seeding Documentation: [https://laravel.com/docs/10.x/seeding](https://laravel.com/docs/10.x/seeding)
 
 PHPFaker Documentation: [https://fakerphp.github.io/formatters/](https://fakerphp.github.io/formatters/)
 
@@ -15,15 +17,19 @@ PHPFaker Documentation: [https://fakerphp.github.io/formatters/](https://fakerph
 - Seeders - `/database/seeders`
 - Factories - `/database/factories`
 
-## Factories (Dynamic Data)
+## Factories
 
-We can use factories to seed data, allowing us to create large amounts of test data instantly.
+Factories describe a set of attributes used by a seeder to create data.
 
-Factories must have a `definition()` method defined that returns values for how a field’s data should be generated. The available faker methods for generating data can be found at the faker libraries documentation page: [https://fakerphp.github.io/formatters/](https://fakerphp.github.io/formatters/)
+Factories must have a `definition()` method defined that returns values for how a field’s data should be generated.
 
-Once a factory is defined, we can use it in our seeder file. 
+### Create a new factory:
 
-File: `/database/factories/ListingFactory.php`
+```php
+php artisan make:factory ListingFactory
+```
+
+Example File: `/database/factories/ListingFactory.php`
 
 ```php
 class ListingFactory extends Factory
@@ -48,9 +54,9 @@ class ListingFactory extends Factory
 }
 ```
 
-File: `/database/seeders/DatabaseSeeder.php`
+With a factory defined, we can use it in our seeder file. 
 
-*Note: You must import the Model before you can use it’s methods.*
+Default Seeder File: `/database/seeders/DatabaseSeeder.php`
 
 ```php
 class DatabaseSeeder extends Seeder
@@ -69,11 +75,9 @@ class DatabaseSeeder extends Seeder
 
 ## Seeding (Manual Data)
 
-In our seeder file, we manually define data using the `create()` method provided to us by our Model. 
+Optionally, in our seeder file, we manually define a single set of data using the `create()` method. 
 
-File: `/database/seeders/DatabaseSeeder.php`
-
-*Note: You must import the Model before you can use it’s methods.*
+Default Seeder File: `/database/seeders/DatabaseSeeder.php`
 
 ```php
 Listing::create([
@@ -87,7 +91,7 @@ Listing::create([
 ]);
 ```
 
-## Usage
+## Run Seeding
 
 ### Seed data:
 
@@ -99,12 +103,6 @@ php artisan db:seed
 
 ```php
 php artisan db:seed --class=UserSeeder
-```
-
-### Create a new factory:
-
-```php
-php artisan make:factory PostFactory
 ```
 
 ### Refresh migrations and seeding:

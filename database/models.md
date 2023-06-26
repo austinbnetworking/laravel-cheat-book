@@ -4,7 +4,7 @@
 
 ***
 
-Laravel uses Eloquent, an object-relational mapper (ORM) that assists in interactions with the database. In Eloquent, each database table has a corresponding Model. The Model object is used to retrieve records, insert records, update records, delete records, etc.
+Laravel uses Eloquent, an object-relational mapper (ORM) that assists in interactions with the database. In Eloquent, each database table has a corresponding Model. The Model object is used to retrieve records, insert records, update records, delete records, etc. Eloquent is considered a powerful query builder, at a glance.
 
 Documentation: [https://laravel.com/docs/10.x/eloquent](https://laravel.com/docs/10.x/eloquent)
 
@@ -14,80 +14,128 @@ Documentation: [https://laravel.com/docs/10.x/eloquent](https://laravel.com/docs
 
 ## Introduction
 
-**Important Note:** You don’t have to tell the Model which table to interact with, the `snake_case`, plural name of the class will be used as the table name unless another name is explicitly specified.
+You can create a Eloquent model using PHP Artisan:
+
+```php
+php artisan make:model Listing
+```
+
+By default, the `snake_case`, plural name of the class will be the default table the model is associated with.
 
 - For example, a `Listing` Model by default interacts with a `listings` database table.
 - To explicitly specify the database table, use the `$table` protected variable.
 
+Once the model & database table are both created, you can start leveraging the benefits of Eloquent.
+
+## Accessing Models
+
+Use the `all()` method to retrieve all records in the table. 
+
 ```php
-<?php
+use App\Models\Flight;
 
-namespace App\Models;
+$flights = Flight::all();
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Listing extends Model
-{
-    use HasFactory;
-    /**
-    * The table associated with the model.
-    *
-    * @var string
-    */		
-    protected $table = 'my_flights';
+foreach ($flights as $flight) {
+    echo $flight->name;
 }
 ```
 
-## Query Scopes
-
-Query Scopes are useful for searching within/filtering down content that a user may request. Scopes allow us to easily re-use query logic in models. To define a scope, simply prefix a model method with `scope`:
+Use the `get()` method to chain conditions and execute a query. 
 
 ```php
-class User extends Model {
+use App\Models\Flight;
+
+$flights = Flight::where('active', 1)
+               ->orderBy('name')
+               ->take(10)
+               ->get();
+
+foreach ($flights as $flight) {
+    echo $flight->name;
+}
+```
+
+Use `find()`, `first()`, or `firstWhere()` to get a specific record.
+
+```php
+use App\Models\Flight;
  
-    public function scopePopular($query)
+// Retrieve a model by its primary key...
+$flight = Flight::find(1);
+ 
+// Retrieve the first model matching the query constraints...
+$flight = Flight::where('active', 1)->first();
+ 
+// Alternative to retrieving the first model matching the query constraints...
+$flight = Flight::firstWhere('active', 1);
+```
+
+## Local Scope
+
+Local scopes allow you to define common sets of query constraints that you may easily re-use throughout your application.
+
+```php
+<?php
+ 
+namespace App\Models;
+ 
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+ 
+class User extends Model
+{
+    /**
+     * Scope a query to only include popular users.
+     */
+    public function scopePopular(Builder $query): void
     {
-        return $query->where('votes', '>', 100);
+        $query->where('votes', '>', 100);
     }
  
-    public function scopeWomen($query)
+    /**
+     * Scope a query to only include active users.
+     */
+    public function scopeActive(Builder $query): void
     {
-        return $query->whereGender('W');
+        $query->where('active', 1);
     }
- 
 }
 ```
 
 Then you could use that scope as follows:
 
 ```php
-$users = User::popular()->women()->orderBy('created_at')->get();
+use App\Models\User;
+ 
+$users = User::popular()->active()->orderBy('created_at')->get();
 ```
 
-Sometimes you may wish to define a scope that accepts parameters. Just add your parameters to your scope function:
+Sometimes you may wish to define a scope that accepts parameters.
 
 ```php
-class User extends Model {
+<?php
  
-    public function scopeOfType($query, $type)
+namespace App\Models;
+ 
+use Illuminate\Database\Eloquent\Model;
+ 
+class User extends Model
+{
+    /**
+     * Scope a query to only include users of a given type.
+     */
+    public function scopeOfType(Builder $query, string $type): void
     {
-        return $query->whereType($type);
+        $query->where('type', $type);
     }
- 
 }
 ```
 
-Then pass the parameter into the scope call:
+Again, use that scope as follows:
 
 ```php
-$users = User::ofType('member')->get();
-```
+use App\Models\User;
 
-## Usage
-
-### Generate a Model:
-
-```php
-php artisan make:model SomeModel
+$users = User::ofType('admin')->get();
 ```
