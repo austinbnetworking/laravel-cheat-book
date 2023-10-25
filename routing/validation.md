@@ -2,6 +2,8 @@
 
 [&larr; Home](../README.md)
 
+***
+
 Laravel provides several different approaches to validate our application's incoming data. It is most common to use the `validate` method available on all incoming HTTP requests.
 
 GET requests are intended to retrieve data from a server and do not modify the server’s state. On the other hand, POST requests are used to send data to the server for processing and may modify the server’s state. The route of a form request should be post, defined in the routes file. 
