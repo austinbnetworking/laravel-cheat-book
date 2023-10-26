@@ -2,19 +2,12 @@
 
 Laravel Documentation: [https://laravel.com/docs/10.x](https://laravel.com/docs/10.x)
 
-## Setup
-[Setup using DDEV](resources/setup-w-ddev.md)  
-[Setup using Valet](resources/setup-w-valet.md)
-
-## Helpers
-[Directory Structure](https://laravel.com/docs/10.x/structure)  
-
 ## Glossary
 
-Resources  
-- [PHP Artisan Cheat Sheet](resources/artisan-cheat-sheet.md)
-- [Setup with DDEV](resources/setup-w-ddev.md)
-- [Github Documentation](resources/github-documentation.md)  
+Blade  
+- [Blade Basics](blade/blade.md)
+- [Components](blade/components.md)
+- [Yield & Sections](blade/yield-sections.md)  
 
 Database  
 - [Environment](database/environment.md)
@@ -22,13 +15,19 @@ Database
 - [Migrations](database/migrations.md)
 - [Models](database/models.md)  
 
-Mail  
-- [Laravel Mail](mail/mail.md)  
+Environment    
+- [Configuration](environment/configuration.md)
+- [Setup W DDEV](environment/setup-w-ddev.md)
+- [Setup W Valet](environment/setup-w-valet.md)
+- [Setup Windows](environment/windows-setup.md)  
 
-Blade  
-- [Blade Basics](blade/blade.md)
-- [Components](blade/components.md)
-- [Yield & Sections](blade/yield-sections.md)  
+Mail  
+- [Mail](mail/mail.md)  
+
+Resources  
+- [PHP Artisan Cheat Sheet](resources/artisan-cheat-sheet.md)
+- [Github Documentation](resources/github-documentation.md)  
+- [Directory Structure (External)](https://laravel.com/docs/10.x/structure)  
 
 Routing  
 - [Forms & Authentication](database/forms-authentication.md)
